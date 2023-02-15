@@ -11,7 +11,7 @@ while true; do
     date; 
     git remote remove origin
     git remote add origin git@github.com:bnowakow/truetool.git
-    git branch --set-upstream-to=origin/bnowakow bnowakow
+    su sup -c "git branch --set-upstream-to=origin/bnowakow bnowakow"
     sleep 3600; 
 done
 
