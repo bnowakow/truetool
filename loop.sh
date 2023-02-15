@@ -6,5 +6,12 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-while true; do ./truetool.sh -s; date; sleep 3600; done
+while true; do 
+    ./truetool.sh -s; 
+    date; 
+    git remote remove origin
+    git remote add origin git@github.com:bnowakow/truetool.git
+    git branch --set-upstream-to=origin/bnowakow bnowakow
+    sleep 3600; 
+done
 
