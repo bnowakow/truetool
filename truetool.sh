@@ -5,7 +5,7 @@ SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}"; )" &> /dev/null && 
 dir=$(basename "$SCRIPT_DIR")
 
 # Change this if you want to fork the project
-enableUpdate="true"
+enableUpdate="false"
 targetRepo="https://github.com/truecharts/truetool.git"
 
 # CD to the folder containing the script to ensure consistent runs
