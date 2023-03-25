@@ -6,12 +6,10 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+cd /mnt/MargokPool/home/sup/code/truetool
+
 while true; do 
-    ./truetool.sh -s; 
-    git remote remove origin
-    git remote add origin git@github.com:bnowakow/truetool.git
-    su sup -c "git branch --set-upstream-to=origin/bnowakow bnowakow"
-    date;
+    ./single-run.sh
     sleep 3600; 
 done
 
